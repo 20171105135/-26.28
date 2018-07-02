@@ -19,7 +19,6 @@ private:
     char* class_ [10];
     char* phoneNo [10];
     int score [5];
-    char* neirong;
 public:
     void pai();
     int gao;
@@ -28,7 +27,7 @@ public:
     float  youxiao;
     float getaverage();
     float getyouxiao();
-    void set(int Nnumber,char *Nname,char* Ndateofbirth [], char* Nclass_ [],char* NphoneNo,int Nscore[],char* Nneirong);
+    void set(int Nnumber,char *Nname,char* Ndateofbirth [], char* Nclass_ [],char* NphoneNo,int Nscore[]);
     void show1();
     void show2();
     void show3()
@@ -77,7 +76,7 @@ void people ::pai()
         }
     }
 }
-void people::set (int Nnumber,char* Nname,char* Ndateofbirth[], char* Nclass_ [],char* NphoneNo,int Nscore[],char* Nneirong )
+void people::set (int Nnumber,char* Nname,char* Ndateofbirth[], char* Nclass_ [],char* NphoneNo,int Nscore[] )
 {
     number=Nnumber;
     name=new char[20];
@@ -87,12 +86,10 @@ void people::set (int Nnumber,char* Nname,char* Ndateofbirth[], char* Nclass_ []
         score[i]=Nscore[i];
         
     }
-    neirong=new char[20];
-    strcpy(neirong,Nneirong);
 }
 void people::show1()
 {
-    cout<<number<<"\t\t"<<name<<"\t\t"<<neirong<<"\t\t";
+    cout<<number<<"\t\t"<<name<<"\t\t";
     for(int i=0;i<5;i++)
     {
         cout<<score[i]<<"  ";
@@ -103,6 +100,7 @@ void people::show2()
 {
     cout<<number<<"\t\t"<<name<<"\t\t"<<gao<<"\t\t"<<di<<"\t\t"<<average;
 }
+
 int main(int arge , const char * argv[])
 {
     FILE *a;
@@ -123,5 +121,28 @@ int main(int arge , const char * argv[])
     }
     return 0;
 }
-
+void main()
+{
+    int i,j;
+    int Nnumber;
+    char* Nname=new char[20];
+    int Nscore[5];
+    people p[5];
+    for(i=0;i<5;i++)
+    {
+        cout<<"输入"<<i+1<<"号选手的信息"<<endl;
+        cout<<"编号:";
+        cin>>Nnumber;
+        cout<<"姓名:";
+        cin>>Nname;
+        cout<<"评委打分:"<<endl;
+        for(j=0;j<5;j++)
+        {
+            cout<<"第"<<"j+1"<<"个评委打分："；
+            cin>>Nscore[j];
+            
+        }
+        p[i].set(Nnumber,Nname,Nscore);
+    }
+}
 
