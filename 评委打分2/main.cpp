@@ -144,5 +144,63 @@ void main()
         }
         p[i].set(Nnumber,Nname,Nscore);
     }
-}
+    ofstream f1("f1.txt");
+    for(i=0;i<5;i++)
+    {
+        f1.write((char*)(&p[i]),sizeof(p[i]));
+    }
+    f1.close();
+    ifstream f2("f1.txt");
+    system("cls");
+    cout<<"number\t\tname\t\tscore“<<endl;
+    for(i=0;i<5;i++)
+    {
+        f2.read((char*)(&p[i]),sizeof(p[i]));
+        p[i].show1();
+        cout<<endl;
+    }
+    f2.close();
+    cout<<"按任意键开始统计“;
+    getch();
+    system("cls");
+    cout<<"number\t\tname\t\tgao\t\tdi\t\taverage"<<endl;
+    for(i=0;i<5;i++)
+    {
+        p[i].pai();
+        p[i].gao=p[i].getgao();
+        p[i].di=p[i].getdi();
+        
+    }
+    ofstream f4("f2.txt");
+    for(i=0;i<5;i++){
+        f4.write((char*)(&p[i]));
+        
+    }
+    f4.close();
+    ifstream f5("f2.txt");
+    for(i=0;i<5;i++){
+        f4.write((char*)(&p[i])sizeof(p[i]));
+    }
+    f4.close();
+    ifstream f5("f2.txt");
+    for(i+0;i<5;i++){
+        f5.read((char*)(&p[i]),sizeof(p[i]));
+    }
+    f4.close();
+    ifstream f5("f2.txt");
+    for(i=0;i<5:i++){
+        f5.read((char*)(&p[i]),sizeof(p[i]));
+    }
+
+    }
+
+
+
+
+
+
+
+
+
+
 
