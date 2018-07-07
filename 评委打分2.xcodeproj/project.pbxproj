@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3C477B7B20E65F5C009F13A5 /* 6.29.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = 6.29.strings; sourceTree = "<group>"; };
+		3C1BB4E020F0DF2E002BE0D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/6.29.strings; sourceTree = "<group>"; };
 		3C9DD9FC20E5B7500046E3E8 /* 评委打分2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "评委打分2"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C9DD9FF20E5B7500046E3E8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				3C9DD9FF20E5B7500046E3E8 /* main.cpp */,
-				3C477B7B20E65F5C009F13A5 /* 6.29.strings */,
+				3C1BB4E120F0DF2E002BE0D9 /* 6.29.strings */,
 			);
 			path = "评委打分2";
 			sourceTree = "<group>";
@@ -126,6 +126,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3C1BB4E120F0DF2E002BE0D9 /* 6.29.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C1BB4E020F0DF2E002BE0D9 /* en */,
+			);
+			name = 6.29.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3C9DDA0120E5B7500046E3E8 /* Debug */ = {
