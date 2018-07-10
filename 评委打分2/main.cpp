@@ -35,7 +35,7 @@ Competitor::Competitor(string id,string name,string birthday,string class_,strin
     average=0;
     sort(score.begin(),score.end());
     vector<int>::iterator it;
-    long count=score.size()-2;
+    int count=score.size()-2;
     for(it=(++score.begin()); it!=(--score.end()); it++) {
         average+=*it;
     }
@@ -61,10 +61,6 @@ string Competitor::getPhoneNumber() {
 }
 string Competitor::getBirthday() {
     return birthday;
-}
-bool greater1(Competitor &c,Competitor &b)
-{
-    return c.getAverage()<b.getAverage();
 }
 int main() {
     string id,name,birthday,class_,phoneNumber;
@@ -99,6 +95,7 @@ int main() {
     }
     sort(cmr.begin(),cmr.end());
     vector<Competitor>::iterator it;
+    output<<"ID,name,birthday,class,telphone,score"<<endl;
     for(it=cmr.begin(); it!=cmr.end(); it++) {
         output<<it->getId()<<","<<it->getName()<<","<<it->getBirthday()<<","<<
 		      it->getClass()<<","<<it->getPhoneNumber()<<","<<it->getAverage()<<endl;
